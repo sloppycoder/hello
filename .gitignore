@@ -1,4 +1,4 @@
 *.tmp
-*/cli/cli
-*/srv/srv
+cli/cli
+srv/srv
 

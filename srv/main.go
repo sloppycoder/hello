@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	hello "github.com/sloppycoder/hello/greeter/srv/proto/hello"
+	hello "github.com/sloppycoder/hello/srv/proto/hello"
 	"github.com/micro/go-micro"
 
 	"context"
