@@ -1,6 +1,10 @@
 syntax = "proto3";
 
-package go.micro.srv.greeter;
+//
+// to regenerate the go bindings
+// protoc --micro_out=. --go_out=. hello.proto
+//
+package hello.srv.greeter;
 
 service Say {
 	rpc Hello(Request) returns (Response) {}
