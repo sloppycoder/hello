@@ -1,4 +1,4 @@
-module github.com/micro/examples
+module github.com/sloppycoder/hello
 
 replace github.com/hashicorp/consul => github.com/hashicorp/consul v1.5.1
 

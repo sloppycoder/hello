@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	hello "github.com/micro/examples/greeter/srv/proto/hello"
+	hello "github.com/sloppycoder/hello/greeter/srv/proto/hello"
 	"github.com/micro/go-micro"
 )
 
@@ -16,7 +16,7 @@ func main() {
 	service.Init()
 
 	// Use the generated client stub
-	cl := hello.NewSayService("go.micro.srv.greeter", service.Client())
+	cl := hello.NewSayService("hello.srv.greeter", service.Client())
 
 	// Make request
 	rsp, err := cl.Hello(context.Background(), &hello.Request{
