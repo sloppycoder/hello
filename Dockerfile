@@ -1,11 +1,14 @@
 FROM golang:1.13-alpine as builder
+
+# disable GOSUMDB due to some upstream package problem
 ENV GOSUMDB off
+
 COPY . /src
 WORKDIR /src
-RUN go build -o app ./cmd/srv
-RUN go build -o cli ./cmd/cli
+RUN go build -o srv ./cmd/srv && \
+    go build -o cli ./cmd/cli
 
 FROM alpine
-CMD ["./app"]
-COPY --from=builder /src/app .
-COPY --from=builder /src/cli .
+CMD ["/srv"]
+COPY --from=builder /src/srv /src/cli /
+
