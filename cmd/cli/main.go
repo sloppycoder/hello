@@ -4,8 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	hello "github.com/sloppycoder/hello/proto/hello"
 	"github.com/micro/go-micro"
+	_ "github.com/micro/go-plugins/registry/kubernetes"
+
+	hello "github.com/sloppycoder/hello/proto/hello"
 )
 
 func main() {

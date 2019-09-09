@@ -1,13 +1,14 @@
 package main
 
 import (
+	"context"
 	"log"
 	"time"
 
-	hello "github.com/sloppycoder/hello/proto/hello"
 	"github.com/micro/go-micro"
+	_ "github.com/micro/go-plugins/registry/kubernetes"
 
-	"context"
+	hello "github.com/sloppycoder/hello/proto/hello"
 )
 
 type Say struct{}
